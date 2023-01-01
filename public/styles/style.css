@@ -1,0 +1,7 @@
+*{
+    margin: 0;
+}
+p::after {
+    content: " test css is work"; color: red;
+
+}
