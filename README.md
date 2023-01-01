@@ -1,2 +1,2 @@
 # Quiz-App-javascript-project
-#hello  add and commit and push  testing  hossam
+#use live server to can access localstorage
