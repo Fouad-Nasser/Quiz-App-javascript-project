@@ -8,7 +8,46 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 </head>
 <body>
-
+    <main>
+        <div class="settings">
+          <h3 style="text-align: center;">Set up your Quiz!</h3>
+          <div class="mt30">
+            <label for="difficulty">Difficulty</label>
+            <label class="container" style="display: inline; margin-left: 30px;">Easy
+              <input type="radio" name="radio" id="easy">
+              <span class="checkmark" style="margin-top: 2px;"></span>
+            </label>
+            <label class="container" style="display: inline; margin-left: 30px;">Medium
+              <input type="radio" name="radio" id="medium">
+              <span class="checkmark" style="margin-top: 2px;"></span>
+            </label>
+            <label  class="container" style="display: inline; margin-left: 30px;">Hard
+              <input type="radio" name="radio" id="hard">
+              <span class="checkmark" style="margin-top: 2px;"></span>
+            </label>
+          </div>
+          <label for="category">Category</label>
+          <select name="category" id="category"> 
+            <option value="Linux">Linux</option>
+            <option value="code">code</option>
+            <option value="DevOps">DevOps</option>
+          </select>
+          <div id="tag" >
+              <label for="tag">tags</label>
+              <select  name="tag" id="tags" >
+                <option value="BASH">BASH</option>
+                <option value="Linux">Linux</option>
+                <option value="Kubernetes">Kubernetes</option>
+              </select>
+          </div>
+          <div class="mt30">
+            <label for="questions">Number of questions</label>
+            <input name="questions" id="questions" type="text" pattern="[0-9]*" />
+          </div>  
+          <button id="start" class="submit">Start</button>
+        </div>  
+      </div>
+    </main>
     <script src='main.js'></script>
 </body>
 </html>
