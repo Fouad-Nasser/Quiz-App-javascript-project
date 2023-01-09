@@ -10,15 +10,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cuprum&family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
+    <style>
+        #photo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .header-photo {
+            position: absolute;
+            margin-left: 85%;
+            width: 70px;
+            height: 70px;
+            margin-top: 10px;
+
+        }
+
+        header {
+            position: relative;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <!-- <div class="header-logo">
-
-        </div> -->
+        <div class="header-photo">
+            <img src="" id="photo">
+        </div>
         <div class="header-register">
-            <a href="./pages/register/index.html">sign up</a>
+            <a href="./index.html" onclick="logout()">Log out</a>
         </div>
     </header>
 
@@ -28,8 +48,8 @@
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, repellat excepturi! Quis illum, sed, neque
                 facere natus atque facilis enim porro tempore sequi numquam fugiat rem, quibusdam eum modi error!</p>
             <div class="btn-container">
-                <button class="btn btn-quiz" onclick="start()">Start Quiz</button>
-                <button class="btn btn-leader" onclick="start()">Leader board</button>
+                <button class="btn btn-quiz">Start Quiz</button>
+                <button class="btn btn-leader">Leader board</button>
             </div>
         </div>
         <div class="section-photo">
@@ -38,11 +58,19 @@
         </div>
     </section>
     <div class="clear"></div>
+
     <script>
-        function start() {
-            window.open("./pages/register/index.html", "_self");
+        var photo = document.getElementById("photo");
+        var url = JSON.parse(localStorage.getItem("userData")).image
+        photo.src = url
+        function logout() {
+            localStorage.removeItem("userData")
+            photo.style.display = "none"
         }
+
     </script>
+
+
 </body>
 
 </html>
