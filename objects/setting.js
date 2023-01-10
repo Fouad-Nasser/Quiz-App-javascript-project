@@ -69,5 +69,8 @@ function Settings() {
     }
     throw new Error('Please enter a number of questions between 1 and 20!');
   } 
-  
-  export default Settings;
+  var any=new Settings()
+x.addEventListener("click",any.geturl.bind(any))
+console.log(any) 
+// export default Settings;
+  // export default Settings;
