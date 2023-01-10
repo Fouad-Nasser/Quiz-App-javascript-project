@@ -38,8 +38,7 @@ function Settings() {
     }
   });
   
-  Settings.prototype.geturl = async function() {
-    try {
+  Settings.prototype.geturl = function() {
       const limit = this.getAmount();
       const category = this.category.value;
       const tags = this.tags.value;
@@ -48,9 +47,6 @@ function Settings() {
       const url = `https://quizapi.io/api/v1/questions?category=${category}&difficulty=${difficulty}&limit=${limit}&tags=${tags}&apiKey=uHwxfvQjSD6C5xhF5A8zDby70UoisYksXQwLzL5T`
       console.log(url)
       return url;
-    } catch (error) {
-      alert(error);
-    }
   }
   
   
