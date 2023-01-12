@@ -2,13 +2,10 @@ export function checkUser(path){
     // debugger
     let user = localStorage.getItem('userData');
 
-    if (user) {
-        let container = document.getElementById('container');
-        container.style.display = 'block';
+    if (!user) {
+       window.location.href = path
     }
-    else{
-        window.location.href = path // "./pages/register/index.html";
-    }
+    
 };
 
 // get image and name from userData

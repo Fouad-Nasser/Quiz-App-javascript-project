@@ -1,5 +1,9 @@
 import Setting from '../../objects/setting.js';
 import Question from '../../objects/question.js';
+import { checkUser } from '../../utils/utils.js';
+
+
+checkUser("../register/index.html");
 
 // get elements from dom
 const startBtn  = document.getElementById('start');

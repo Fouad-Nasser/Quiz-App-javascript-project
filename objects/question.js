@@ -185,7 +185,7 @@ function Question(_questions,qPointsValue) {
         localStorage.setItem('num3',JSON.stringify(userData));
       }
   
-      // window.open(``,"_self"); 
+      window.open(`../result/result.html?correctAnswer=${this.getCorrectQ()}&totalAnswer=${this.getQCount()}&pointValue=${this.getQCount()}`,"_self"); 
   }
   
   
